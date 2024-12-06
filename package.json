@@ -1,0 +1,28 @@
+{
+  "name": "web_nopi",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "^1.1.14",
+    "@types/pg": "^8.11.10",
+    "kysely-codegen": "^0.17.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^1.1.1",
+    "@elysiajs/jwt": "^1.1.1",
+    "elysia": "^1.1.25",
+    "kysely": "^0.27.4",
+    "lucide": "^0.466.0",
+    "pg": "^8.13.1",
+    "zod": "^3.23.8"
+  },
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts --target bun --outdir ./dist",
+    "start": "NODE_ENV=production bun dist/index.js",
+    "test": "bun test"
+  }
+}
